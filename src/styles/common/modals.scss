@@ -49,7 +49,7 @@
     top: 10vh;
     left: 50%;
     transform: translateX(-50%);
-    background: url("../../img/modal-offer-bg.png") no-repeat;
+    background: url("../img/modal-offer-bg.png") no-repeat;
     background-size: cover;
     border-radius: 50px;
 
@@ -57,7 +57,7 @@
       content: '';
       width: 13.698vw;
       height: 20.104vw;
-      background-image: url(../../img/modal-offer-bg-part.png);
+      background-image: url(../img/modal-offer-bg-part.png);
       background-repeat: no-repeat;
       background-size: cover;
       position: absolute;
@@ -111,7 +111,7 @@
   &__select {
     appearance: none;
     position: relative;
-    background: #ffffff url("../../img/select-arrow.png") no-repeat;
+    background: #ffffff url("../img/select-arrow.png") no-repeat;
     background-position: 95%;
   }
 
@@ -127,7 +127,7 @@
       display: block;
       width: 10.365vw;
       height: 2.708vw;
-      background-image: url(../../img/plant.png);
+      background-image: url(../img/plant.png);
       background-size: cover;
       position: absolute;
       top: 20%;
@@ -147,7 +147,7 @@
     top: 20vh;
     left: 50%;
     transform: translateX(-50%);
-    background: url("../../img/modal-thank-bg.png") no-repeat;
+    background: url("../img/modal-thank-bg.png") no-repeat;
     background-size: cover;
     border-radius: 50px;
   }
