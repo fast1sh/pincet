@@ -1,0 +1,45 @@
+.main {
+  background: url(../../img/main-bg.png) no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &__bg-part {
+    position: absolute;
+
+    &:first-child {
+      width: 18.698vw;
+      height: 17.292vw;
+      top: 15.104vw;
+      left: 5.990vw;
+    }
+
+    &:nth-child(2) {
+      width: 13.125vw;
+      height: 13.854vw;
+      top: 4.688vw;
+      right: -5.729vw;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 8.021vw;
+    background-image: url(../../img/wave.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 992px) {
+  .main::after {
+    height: 4.6875rem;
+    background-size: auto;
+  }
+}

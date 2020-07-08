@@ -1,0 +1,249 @@
+.overlay {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  animation: fadeIn .4s;
+}
+
+.modal-close {
+  position: absolute;
+  right: 1.719vw;
+  top: 1.823vw;
+  width: 0.625vw;
+  height: 0.625vw;
+  transform: translate(-100%, 100%);
+  cursor: pointer;
+  z-index: 99;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color: #8a97a1;
+    opacity: .5;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modal-offer {
+  display: none;
+
+  &__inner {
+    padding: 3.906vw 5.208vw;
+    width: 38.438vw;
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../../img/modal-offer-bg.png") no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+
+    &::before {
+      content: '';
+      width: 13.698vw;
+      height: 20.104vw;
+      background-image: url(../../img/modal-offer-bg-part.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 30%;
+      left: -16%;
+      z-index: -1;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 1.198vw 0;
+    font-size: 1.875vw;
+    font-weight: 300;
+    align-self: center;
+
+    &_strong {
+      font-weight: 700;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 1.927vw;
+    font-size: 0.833vw;
+    letter-spacing: 0.021vw;
+    align-self: center;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    margin-bottom: 0.833vw;
+    padding: 1.667vw 2.344vw;
+    border-radius: 40px;
+    border: 1px solid #fbeeef;
+    background-color: #ffffff;
+    color: #989797;
+    font-size: 0.938vw;
+    font-weight: 300;
+    letter-spacing: 0.023vw;
+  }
+
+  &__select {
+    appearance: none;
+    position: relative;
+    background: #ffffff url("../../img/select-arrow.png") no-repeat;
+    background-position: 95%;
+  }
+
+  &__btn {
+    padding: 1.771vw 3.542vw 1.458vw;
+    text-align: left;
+    font-size: 0.938vw;
+    letter-spacing: 0.113vw;
+    text-shadow: 0 1px 5px rgba(210, 110, 116, 0.49);
+
+    &::after {
+      content: '';
+      display: block;
+      width: 10.365vw;
+      height: 2.708vw;
+      background-image: url(../../img/plant.png);
+      background-size: cover;
+      position: absolute;
+      top: 20%;
+      right: -13%;
+    }
+  }
+}
+
+.modal-thank {
+  display: none;
+
+  &__inner {
+    text-align: center;
+    padding: 2.083vw 5.867vw 3.125vw;
+    width: 27.292vw;
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../../img/modal-thank-bg.png") no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+  }
+
+  &__title {
+    font-size: 1.563vw;
+    letter-spacing: 0.039vw;
+
+    &_strong {
+      font-weight: 700;
+    }
+  }
+
+  &__icon > img {
+    width: 9.010vw;
+    height: 8.802vw;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .modal-offer {
+    &__inner {
+      padding: 4rem 3rem;
+      width: 50%;
+
+      &::before {
+        width: 8.4375rem;
+        height: 12rem;
+      }
+    }
+
+    &__title {
+      margin-bottom: 0.6875rem;
+      font-size: 1.125rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 1.1875rem;
+      font-size: 0.6rem;
+    }
+
+    &__input {
+      margin-bottom: 0.5rem;
+      padding: 1rem 1.4375rem;
+      font-size: 0.5625rem;
+    }
+
+    &__btn {
+      padding: 1rem 2rem 0.8125rem;
+      font-size: 0.53125rem;
+
+      &::after {
+        width: 5.9375rem;
+        height: 1.5625rem;
+      }
+    }
+  }
+
+  .modal-close {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  .modal-thank {
+    &__inner {
+      padding: 2rem;
+      width: 17rem;
+    }
+
+    &__icon > img {
+      width: 5.5rem;
+      height: 5.375rem;
+    }
+
+    &__title {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 678px) {
+  .modal-offer__inner {
+    width: 80%;
+
+    &::before {
+      display: none;
+    }
+  }
+}
